@@ -2,13 +2,13 @@
 
 .govuk-header {
     --header-background-colour: var(--nrw-grey-light);
-    --header-border-colour: var(--nrw-green);
+    --header-border-colour: var(--nrw-grey-mid);
     background: var(--header-background-colour);
     border-color: var(--header-border-colour);
 }
 
 .govuk-header__container {
-    --header-border-colour: var(--nrw-green);
+    --header-border-colour: var(--nrw-grey-mid);
     border-color: var(--header-border-colour);
 }
 
