@@ -1,0 +1,19 @@
+{% extends "layout_prototype.html" %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">You're eligible</h1>
+
+<p>Based on the information you provided, you qualify for a council tax exemption</p>
+
+<form action="q-radio-3.html">
+  <button class="govuk-button" data-module="govuk-button">Continue</button>
+</form>
+
+
+
+{% endblock %}
