@@ -13,13 +13,30 @@ router.post('/do-you-live-with-answer', function (req, res) {
     // Check whether the variable matches a condition
     if (doYouLiveWith == "Yes"){
       // Send user to next page
-      res.redirect('/journeys/1/q-radio-2')
+      res.redirect('/q-radio-2')
     } else {
       // Send user to ineligible page
-      res.redirect('/ineligible')
+      res.redirect('/journeys/a/q-text-13.html')
     }
   
   });
+
+  // Run this code when a form is submitted to 'are-you-a-student-answer'
+router.post('/are-you-a-student-answer', function (req, res) {
+
+  // Make a variable and give it the value from 'are-you-a-student'
+  var areYouaStudent = req.session.data['are-you-a-student']
+
+  // Check whether the variable matches a condition
+  if (areYouaStudent == "Yes"){
+    // Send user to next page
+    res.redirect('/journeys/1/confirmation-1')
+  } else {
+    // Send user to ineligible page
+    res.redirect('/journeys/2/confirmation-1')
+  }
+
+});
 
  // JOURNEY 1 -----------------------------------------------------------------
   // Run this code when a form is submitted to 'full-time-education-answer'
@@ -51,10 +68,65 @@ router.post('/full-time-education-answer', function (req, res) {
       res.redirect('/journeys/1/q-text-1')
     } else {
       // Send user to ineligible page
-      res.redirect('/journeys/1/q-text-2')
+      res.redirect('/create-application')
     }
   
   });
+
+
+    // Run this code when a form is submitted to 'open-university-answer'
+    router.post('/open-university-answer', function (req, res) {
+
+      // Make a variable and give it the value from 'open-university-answer'
+      var openUniversity = req.session.data['open-university']
+    
+      // Check whether the variable matches a condition
+      if (openUniversity == "Yes"){
+        // Send user to next page
+        res.redirect('/journeys/1/q-radio-7')
+      } else {
+        // Send user to ineligible page
+        res.redirect('/journeys/1/q-radio-8')
+      }
+    
+    });
+
+
+    // Run this code when a form is submitted to 'studying-80-units-answer'
+    router.post('/studying-80-units-answer', function (req, res) {
+
+      // Make a variable and give it the value from 'studying-80-units-account'
+      var studying80units = req.session.data['studying-80-units']
+    
+      // Check whether the variable matches a condition
+      if (studying80units == "Yes"){
+        // Send user to next page
+        res.redirect('/journeys/1/q-text-8')
+      } else {
+        // Send user to ineligible page
+        res.redirect('/journeys/1/ineligible')
+      }
+    
+    });
+
+
+        // Run this code when a form is submitted to 'studying-21-hours-answer'
+        router.post('/studying-21-hours-answer', function (req, res) {
+
+          // Make a variable and give it the value from 'studying-21-hours-account'
+          var studying21hours = req.session.data['studying-21-hours']
+        
+          // Check whether the variable matches a condition
+          if (studying21hours == "Yes"){
+            // Send user to next page
+            res.redirect('/journeys/1/q-text-7')
+          } else {
+            // Send user to ineligible page
+            res.redirect('/journeys/1/ineligible')
+          }
+        
+        });
+
 
     // Run this code when a form is submitted to 'another-student-living-answer'
     router.post('/another-student-living-answer', function (req, res) {

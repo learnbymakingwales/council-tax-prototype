@@ -11,13 +11,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Do you live alone in the property?</h1>
+      <h1 class="govuk-heading-xl">Are you a student in full time education?</h1>
 
-      <form class="form" action="do-you-live-with-answer" method="post">
+      <form class="form" action="are-you-a-student-answer" method="post">
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
         {{ govukRadios({
-          name: "do-you-live-with",
+          name: "are-you-a-student",
           fieldset: {
             legend: {
               isPageHeading: true,

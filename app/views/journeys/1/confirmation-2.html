@@ -1,20 +1,30 @@
 {% extends "layout_prototype.html" %}
 
-{% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-
-{% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-{% endblock %}
 
 {% block content %}
 
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
 
-<h1 class="govuk-heading-xl">You're eligible</h1>
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h1 class="govuk-panel__title">Application complete</h1>
+        <div class="govuk-panel__body">
+          Your reference number<br><strong>HDJ2123F</strong>
+        </div>
+      </div>
 
-<p>Based on this information you do not qualify for money off your council tax. You may qualify for further money off if other scenarios apply. Please go to <a href="https://www.gov.wales/council-tax-discounts-and-reduction">GOV.Wales</a> for more information.</p>
+      <p>
+        We have sent you a confirmation email.
+      </p>
 
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>We've sent your application to xx.</p>
+      <p>They will contact you either to confirm your application, or to ask for more information.</p>
+      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
 
+      <h2 class="govuk-heading-m">Further information </h2>
+      <p>You may be entitled to other benefits. More information is available on <a href="https://www.gov.wales/council-tax-discounts-and-reduction">GOV.Wales</a>.</p>
+    </div>
+  </div>
 
 {% endblock %}
