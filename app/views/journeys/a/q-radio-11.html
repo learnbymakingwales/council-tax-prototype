@@ -11,13 +11,13 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Do you have a council tax account?</h1>
+      <h1 class="govuk-heading-xl">Are they all students in full time education?</h1>
 
-      <form class="form" action="../../j2-council-tax-account-answer" method="post">
+      <form class="form" action="../../are-they-all-students-answer" method="post">
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
         {{ govukRadios({
-          name: "j2-council-tax-account",
+          name: "are-they-all-students",
           fieldset: {
             legend: {
               isPageHeading: true,

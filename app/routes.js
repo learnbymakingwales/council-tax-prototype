@@ -149,24 +149,79 @@ router.post('/full-time-education-answer', function (req, res) {
 
  // JOURNEY 2 -----------------------------------------------------------------
 
-//GUIDANCE
+   // Run this code when a form is submitted to 'council-tax-account-answer'
+   router.post('/j2-council-tax-account-answer', function (req, res) {
 
-// Run this code when a form is submitted to 'the form action'
-router.post('/juggling-balls-answer', function (req, res) {
+    // Make a variable and give it the value from 'council-tax-account'
+    var j2councilTaxAccount = req.session.data['j2-council-tax-account']
+  
+    // Check whether the variable matches a condition
+    if (j2councilTaxAccount == "Yes"){
+      // Send user to next page
+      res.redirect('/journeys/2/q-text-1')
+    } else {
+      // Send user to ineligible page
+      res.redirect('/create-application')
+    }
+  
+  });
 
-  // Make a variable and give it the value from the form options
-  var howManyBalls = req.session.data['how-many-balls']
 
-  // Check whether the variable matches a condition
-  if (howManyBalls == "3 or more"){
-    // Send user to next page
-    res.redirect('/juggling-trick')
-  } else {
-    // Send user to ineligible page
-    res.redirect('/ineligible')
-  }
+     // Run this code when a form is submitted to 'has-someone-moved-answer'
+     router.post('/j2-has-someone-moved-answer', function (req, res) {
 
-});
+      // Make a variable and give it the value from 'has-someone-moved'
+      var j2hasSomeoneMoved = req.session.data['j2-has-someone-moved']
+    
+      // Check whether the variable matches a condition
+      if (j2hasSomeoneMoved == "Yes"){
+        // Send user to next page
+        res.redirect('/journeys/2/q-text-13')
+      } else {
+        // Send user to ineligible page
+        res.redirect('/journeys/2/check-answers')
+      }
+    
+    });
+
+
+
+    // JOURNEY a -----------------------------------------------------------------
+
+   // Run this code when a form is submitted to 'are-they-all-18-answer'
+   router.post('/are-they-all-18-answer', function (req, res) {
+
+    // Make a variable and give it the value from 'are-they-all-18-account'
+    var areTheyAll18 = req.session.data['are-they-all-18']
+  
+    // Check whether the variable matches a condition
+    if (areTheyAll18 == "Yes"){
+      // Send user to next page
+      res.redirect('journeys/a/q-radio-11')
+    } else {
+      // Send user to ineligible page
+      res.redirect('/edge')
+    }
+  
+  });
+
+
+     // Run this code when a form is submitted to 'are-they-all-students-answer'
+     router.post('/are-they-all-students-answer', function (req, res) {
+
+      // Make a variable and give it the value from 'are-they-all-students'
+      var areTheyAllStudents = req.session.data['are-they-all-students']
+    
+      // Check whether the variable matches a condition
+      if (areTheyAllStudents == "Yes"){
+        // Send user to next page
+        res.redirect('edge')
+      } else {
+        // Send user to ineligible page
+        res.redirect('/edge')
+      }
+    
+    });
 
   
 

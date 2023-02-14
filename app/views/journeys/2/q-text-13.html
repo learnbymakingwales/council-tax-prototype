@@ -11,29 +11,23 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Do you have a council tax account?</h1>
+      <h1 class="govuk-heading-xl">When did they move out?</h1>
 
-      <form class="form" action="../../j2-council-tax-account-answer" method="post">
+      <form class="form" action="q-text-14.html">
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
-        {{ govukRadios({
-          name: "j2-council-tax-account",
+        {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+        {{ govukDateInput({
+          id: "passport-issued",
+          namePrefix: "passport-issued",
           fieldset: {
             legend: {
               isPageHeading: true,
               classes: "govuk-fieldset__legend--l"
             }
           },
-          items: [
-            {
-              value: "Yes",
-              text: "Yes"
-            },
-            {
-              value: "No",
-              text: "No"
-            }
-          ]
+          hint: {
+            text: "For example, 27 1 2023"
+          }
         }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
