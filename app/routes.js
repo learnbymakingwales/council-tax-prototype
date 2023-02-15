@@ -161,7 +161,7 @@ router.post('/full-time-education-answer', function (req, res) {
       res.redirect('/journeys/2/q-text-1')
     } else {
       // Send user to ineligible page
-      res.redirect('/create-application')
+      res.redirect('/create-application-2')
     }
   
   });
