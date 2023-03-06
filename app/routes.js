@@ -74,6 +74,24 @@ router.post('/full-time-education-answer', function (req, res) {
   });
 
 
+    // Run this code when a form is submitted to 'how-would-you-like-contact-answer'
+    router.post('/how-would-you-like-contact-answer', function (req, res) {
+
+      // Make a variable and give it the value from 'how-would-you-like-contact'
+      var howWouldYouLikeContact = req.session.data['how-would-you-like-contact']
+    
+      // Check whether the variable matches a condition
+      if (howWouldYouLikeContact == "Email"){
+        // Send user to next page
+        res.redirect('/journeys/1/q-text-3')
+      } else {
+        // Send user to ineligible page
+        res.redirect('/journeys/1/q-text-4')
+      }
+    
+    });
+
+
     // Run this code when a form is submitted to 'open-university-answer'
     router.post('/open-university-answer', function (req, res) {
 
@@ -165,6 +183,24 @@ router.post('/full-time-education-answer', function (req, res) {
     }
   
   });
+
+
+      // Run this code when a form is submitted to 'how-would-you-like-contact-answer'
+      router.post('/j2-how-would-you-like-contact-answer', function (req, res) {
+
+        // Make a variable and give it the value from 'how-would-you-like-contact'
+        var j2howWouldYouLikeContact = req.session.data['j2-how-would-you-like-contact']
+      
+        // Check whether the variable matches a condition
+        if (j2howWouldYouLikeContact == "Email"){
+          // Send user to next page
+          res.redirect('/journeys/2/q-text-3')
+        } else {
+          // Send user to ineligible page
+          res.redirect('/journeys/2/q-text-4')
+        }
+      
+      });
 
 
      // Run this code when a form is submitted to 'has-someone-moved-answer'
