@@ -11,7 +11,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">What's your address?</h1>
+      <h1 class="govuk-heading-xl">Beth yw dy gyfeiriad?</h1>
 
       <form class="form" action="q-radio-9.html">
 
@@ -25,7 +25,7 @@
 }) %}
   {{ govukInput({
     label: {
-      text: 'Address line 1'
+      text: 'Llinell 1 cyfeiriad'
     },
     id: "address-line-1",
     name: "address-line-1",
@@ -33,7 +33,7 @@
   }) }}
   {{ govukInput({
     label: {
-      text: 'Address line 2 (optional)'
+      text: 'Llinell 2 cyfeiriad (opsiynol)'
     },
     id: "address-line-2",
     name: "address-line-2",
@@ -41,7 +41,7 @@
   }) }}
   {{ govukInput({
     label: {
-      text: "Town or city"
+      text: "Tref neu ddinas"
     },
     classes: "govuk-!-width-two-thirds",
     id: "address-town",
@@ -50,7 +50,7 @@
   }) }}
   {{ govukInput({
     label: {
-      text: "County (optional)"
+      text: "Sir (opsiynol)"
     },
     classes: "govuk-!-width-two-thirds",
     id: "address-county",
@@ -58,7 +58,7 @@
   }) }}
   {{ govukInput({
     label: {
-      text: "Postcode"
+      text: "Cod post"
     },
     classes: "govuk-input--width-10",
     id: "address-postcode",
@@ -67,7 +67,7 @@
   }) }}
 {% endcall %}
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
+        <button class="govuk-button" data-module="govuk-button">Parhau</button>
 
       </form>
 
